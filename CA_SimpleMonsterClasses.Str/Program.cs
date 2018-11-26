@@ -4,10 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimpleMonsterClasses
+namespace CA_SimpleMonsterClasses
 {
     class Program
     {
+        // *********************************************************
+        //
+        // [add comment block]
+        //
+        // *********************************************************
         static void Main(string[] args)
         {
             DisplayOpeningScreen();
@@ -15,65 +20,64 @@ namespace SimpleMonsterClasses
             DisplayClosingScreen();
         }
 
+        /// <summary>
+        /// instantiate and initialize sid the sea monster
+        /// </summary>
+        /// <param name="name">name</param>
+        /// <returns>SeaMonster object</returns>
         static SeaMonster InitializeSeaMonsterSid(string name)
         {
-            SeaMonster sid = new SeaMonster("Sid");
 
-            sid.Weight = 2.5;
-            sid.CanUseFreshwater = true;
-
-            return sid;
         }
 
+        /// <summary>
+        /// instantiate and initialize suzy the sea monster
+        /// </summary>
+        /// <returns>SeaMonster object</returns>
         static SeaMonster InitializeSeaMonsterSuzy()
         {
-            SeaMonster suzy = new SeaMonster();
 
-            suzy.Name = "Suzy";
-            suzy.Weight = 1.2;
-            suzy.CanUseFreshwater = true;
-
-            return suzy;
         }
 
+        /// <summary>
+        /// display all information about a sea monster
+        /// </summary>
+        /// <param name="seaMonster">SeaMonster object</param>
         static void DisplaySeaMonsterInfo(SeaMonster seaMonster)
         {
 
         }
 
+        /// <summary>
+        /// display a list of all sea monsters
+        /// </summary>
+        /// <param name="seaMonsters">list of SeaMonster</param>
         static void DisplayAllSeaMonsters(List<SeaMonster> seaMonsters)
         {
-            DisplayHeader("List of Sea Monsters");
 
-            foreach (SeaMonster seaMonster in seaMonsters)
-            {
-                Console.WriteLine(seaMonster.Name);
-            }
-
-            DisplayContinuePrompt();
         }
 
+        /// <summary>
+        /// display a screen to get a new sea monster from the user
+        /// </summary>
+        /// <param name="seaMonsters">list of SeaMonster</param>
         static void DisplayGetUserSeaMonster(List<SeaMonster> seaMonsters)
         {
 
         }
 
+        /// <summary>
+        /// display menu and process user menu choices
+        /// </summary>
         static void DisplayMenu()
         {
             //
             // instantiate sea monsters
             //
-            SeaMonster suzy;
-            suzy = InitializeSeaMonsterSuzy();
-            SeaMonster sid;
-            sid = InitializeSeaMonsterSid("Sid");
 
             //
             // add sea monsters to list
             //
-            List<SeaMonster> seaMonsters = new List<SeaMonster>();
-            seaMonsters.Add(suzy);
-            seaMonsters.Add(sid);
 
             string menuChoice;
             bool exiting = false;
@@ -95,7 +99,7 @@ namespace SimpleMonsterClasses
                 {
                     case "A":
                     case "a":
-                        DisplayAllSeaMonsters(seaMonsters);
+
                         break;
 
                     case "B":
@@ -128,6 +132,8 @@ namespace SimpleMonsterClasses
                 }
             }
         }
+
+        #region HELPER METHODS
 
         /// <summary>
         /// display opening screen
@@ -178,5 +184,9 @@ namespace SimpleMonsterClasses
             Console.WriteLine("\t\t" + headerTitle);
             Console.WriteLine();
         }
+
+        #endregion
+
+
     }
 }

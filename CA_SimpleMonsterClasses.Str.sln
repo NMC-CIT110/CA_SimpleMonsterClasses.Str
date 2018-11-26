@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CA_SimpleMonsterClasses.Str", "SimpleMonsterClasses\CA_SimpleMonsterClasses.Str.csproj", "{15B1B811-75CF-4AD7-B7D4-74F31168662C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CA_SimpleMonsterClasses.Str", "CA_SimpleMonsterClasses.Str\CA_SimpleMonsterClasses.Str.csproj", "{15B1B811-75CF-4AD7-B7D4-74F31168662C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
